@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  
+ 
+
+  <div class="container p-3 my-3 bg-success text-white">
+
+  
+  
+
+  <h1>Pacientes</h1><br/>
+        
+</div><br/><br/>
+
+
+<form action="">
+
+<div class="form-group">
+
+    <label for="ide">IDE:</label>
+    <input type="ide" class="form-control" id="ide"  matInput placeholder="ID" #nombre maxlength="80" [(ngModel)]="ContactModel.ide" name="Ide" required><br/>
+    <button class="btn btn-success btn-sm" ng-click="Buscar(company)">Buscar</button>
+  </div>
+  
+  
+  <div>
+    <label for="ide">Nombres:</label>
+    <input type="nombre" class="form-control" id="nombre"  matInput placeholder="Escribe tu Nombre aqui" #nombre maxlength="80" [(ngModel)]="ContactModel.name" name="Nombre" required>
+  </div>
+  
+  
+  <div>
+  <label for="ide">Apellidos:</label>
+    <input type="apellidos" class="form-control" id="apellidos"  matInput placeholder="Escribe tus Apellidos aqui" #apellido maxlength="80" [(ngModel)]="ContactModel.ide" name="Apellidos" required>
+  </div>
+  
+  
+   <div>
+  <label for="ide">Edad:</label>
+    <input type="edad" class="form-control" id="edad"  matInput placeholder="Edad" #edad maxlength="80" [(ngModel)]="ContactModel.edad" name="edad" required>
+  </div>
+ 
+     <div><br/>
+   
+      
+      Sexo:
+  <input type="radio" ng-model="myVar" value="femenino">Femenino
+  <input type="radio" ng-model="myVar" value="masculino">Maculino
+   </div><br/>
+   
+  
+    
+    <div>
+    <label for="ide">Telefono:</label>
+    <input type="telefono" class="form-control" id="telefono"  matInput placeholder="telefono" #nombre maxlength="80" [(ngModel)]="ContactModel.telefono" name="telefono" required>
+  </div><br/>
+    
+    
+    <div>
+    <label for="ide">Direccion:</label>
+    <input type="direccion" class="form-control" id="direccion"  matInput placeholder="Direccion" #nombre maxlength="80" [(ngModel)]="ContactModel.direccion" name="direccion" required>
+ 
+  </div><br/>
+    
+      <div>
+      
+      
+    <label for="ide">Numero de Seguro Social:</label>
+    <input type="Seguro" class="form-control" id="Seguro"  matInput placeholder="Seguro" #nombre maxlength="80" [(ngModel)]="ContactModel.telefono" name="Seguro" required>
+  </div><br/>
+   
+   
+   
+   
+   
+  <div>
+   
+    <label for="ide">IDE Doctor:</label>
+  <select ng-model="myVar">
+    <option value="">
+    <option value="0001"> 0001
+    <option value="0002"> 0002
+    <option value="0003">0003
+    
+     <option value="0003">0004
+     
+      <option value="0003">0005
+       <option value="0003">0006
+  </select><br/><br/>
+   
+   <div>
+    <button  class="btn btn-success  btn-lg" type[disabled]="!contactForm.form.valid" >  Crear</button>
+   
+   <button class="btn btn-success btn-lg" ng-click="edit(company)">Editar</button>
+   
+   
+   
+   
+    
+  </form>
+  </div>
+</div><br/><br/>
+
+
+<div>
+<h1>Lista Pacientes</h1><br/>
+        
+</div>
+
+
+<table class="table table-responsive table-bordered">
+    <thead>
+        <tr>
+        
+        
+            <th>IDE</th>
+          
+            <th>Nombres</th>
+           
+            <th>Apellidos</th>
+            <th>Edad </th>
+            
+            <th>Sexo</th>
+            
+            <th>Telefono</th>
+            
+            <th>Direccion</th>
+            
+            <th>Numero de Seguro Social</th>
+            <th>IDE Doctor</th>
+             <th>Estado</th>
+             
+            
+            
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1000</td>
+            <td>Maria Eugenia</td>
+            <td>Perez Perez</td>
+            <td>24</td>
+            <td>F</td>
+            <td>320-510369</td>
+            <td>cra 27 -23</td>
+            <td>2365</td>
+            <td>0001</td>
+              <td><button value="editar" title="editar" class="btn btn-success btn-sm" ng-click="Editar(company)">Editar</button>
+             <br/>   <br/><button value="eliminar" title="eliminar" class="btn btn-success btn-sm" ng-click="Eliminar(company)">Eliminar</button>
+
+ </td>
+            
+        </tr>
+        <tr>
+            <td>2000</td>
+            <td>Pablo Jose</td>
+            <td>LopezReyes</td>
+            <td>36</td>
+            <td>M</td>
+            <td>315-693879</td>
+            <td>calle 20-96-3</td>
+            <td>8965</td>
+            <td>0002</td>
+              <td><button value="editar" title="editar" class="btn btn-success btn-sm" ng-click="Editar(company)">Editar</button>
+             <br/>   <br/><button value="eliminar" title="eliminar" class="btn btn-success btn-sm  ng-click="Eliminar(company)" >Eliminar</button>
+
+ </td>
+            
+        </tr>
+        <tr>
+            
+</div>
+</table>
+
+
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.firstname = "John";
+});
+</script>
+
+
+</body>
+</html>
+
